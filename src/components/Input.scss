@@ -1,0 +1,31 @@
+.Input {
+  height: 4rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > form {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    height: 3rem;
+    > input {
+      background-color: #3d3d3d;
+      border: none;
+      border-radius: 0.25rem;
+      padding: 1rem;
+      width: 95%;
+    }
+    > button {
+      font-size: 1rem;
+      font-weight: 600;
+      width: 5%;
+      cursor: pointer;
+      border: none;
+      border-radius: 0.25rem;
+      background-color: #15803d;
+    }
+  }
+}
