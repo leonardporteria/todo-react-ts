@@ -58,7 +58,7 @@ const Card: React.FC<{
           className={`Card ${snapshot.isDragging ? 'drag' : ''}`}
         >
           {edit ? (
-            <>
+            <div className='Card__Editing'>
               <input
                 value={editTodo}
                 onChange={(e) => setEditTodo(e.target.value)}
@@ -74,28 +74,28 @@ const Card: React.FC<{
                   Cancel
                 </button>
               </div>
-            </>
+            </div>
           ) : todo.isDone ? (
             <s className='Card__Content'>{todo.todo}</s>
           ) : (
             <p className='Card__Content'>{todo.todo}</p>
           )}
           <div className='Card__Labels'>
+            <p className='label done' onClick={() => handleDone(todo.id)}>
+              Done
+            </p>
             <p
-              className='label'
+              className='label edit'
               onClick={() => {
                 if (!edit && !todo.isDone) {
                   setEdit(!edit);
                 }
               }}
             >
-              edit
+              Edit
             </p>
-            <p className='label' onClick={() => handleDelete(todo.id)}>
-              del
-            </p>
-            <p className='label' onClick={() => handleDone(todo.id)}>
-              done
+            <p className='label delete' onClick={() => handleDelete(todo.id)}>
+              Delete
             </p>
           </div>
         </form>

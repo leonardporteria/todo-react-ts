@@ -99,13 +99,11 @@ const App: React.FC = () => {
               )}
             </Droppable>
             <Droppable droppableId='TodosRemove'>
-              {(provided, snapshot) => (
+              {(provided) => (
                 <div
                   ref={provided.innerRef}
                   {...provided.droppableProps}
-                  className={`Todos__Container__Section completed ${
-                    snapshot.isDraggingOver ? 'dragcomplete' : 'remove'
-                  }`}
+                  className={`Todos__Container__Section completed `}
                 >
                   <h1 className='Todos__Container__Section__Header'>
                     Completed Tasks

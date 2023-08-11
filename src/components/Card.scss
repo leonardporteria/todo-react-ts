@@ -1,0 +1,75 @@
+.Card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  color: #242424;
+
+  background-color: #ececec;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+
+  &__Content {
+    font-weight: 600;
+    width: 70%;
+    display: flex;
+  }
+  &__Editing {
+    font-weight: 600;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    .Card__Content {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      width: 90%;
+      border: none;
+      border: none;
+      border-radius: 0.25rem;
+      padding: 0.5rem;
+    }
+    .Card__Edit {
+      display: flex;
+      gap: 1rem;
+      &__Save {
+        border: none;
+        border-radius: 0.25rem;
+        padding: 0.5rem;
+        background-color: #008000;
+        cursor: pointer;
+      }
+      &__Cancel {
+        border: none;
+        border-radius: 0.25rem;
+        padding: 0.5rem;
+        background-color: #a52a2a;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__Labels {
+    cursor: pointer;
+    width: 30%;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    > p {
+      border-radius: 0.25rem;
+      padding: 0.5rem;
+      color: rgb(231, 231, 231);
+    }
+
+    .done {
+      background-color: #008000;
+    }
+    .edit {
+      background-color: #cc8502;
+    }
+    .delete {
+      background-color: #a52a2a;
+    }
+  }
+}
