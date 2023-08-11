@@ -1,9 +1,39 @@
 .App {
-  margin: 1rem;
   width: 90vw;
-  height: 120vh;
+  height: 100vh;
 
   > h1 {
     text-align: center;
   }
+}
+
+.Todos {
+  width: 100%;
+  &__Container {
+    display: flex;
+    gap: 1rem;
+    &__Section {
+      background-color: gray;
+      width: 50%;
+      height: fit-content;
+      border-radius: 0.25rem;
+      padding: 0.5rem;
+
+      &__Header {
+        text-align: center;
+      }
+    }
+
+    .current {
+      background-color: green;
+    }
+
+    .completed {
+      background-color: brown;
+    }
+  }
+}
+
+.drag {
+  scale: 1.3;
 }
